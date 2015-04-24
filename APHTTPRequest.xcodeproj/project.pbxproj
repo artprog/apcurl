@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905C0641AEA6B4900E71FD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B905C0631AEA6B4900E71FD8 /* main.m */; };
+		B905C0641AEA6B4900E71FD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B905C0631AEA6B4900E71FD8 /* main.mm */; };
 		B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */; };
 		B905C06C1AEA6BFE00E71FD8 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */; };
 /* End PBXBuildFile section */
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		B905C0601AEA6B4900E71FD8 /* APHTTPRequest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = APHTTPRequest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B905C0631AEA6B4900E71FD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B905C0631AEA6B4900E71FD8 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APHTTPRequest.cpp; sourceTree = "<group>"; };
 		B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APHTTPRequest.hpp; sourceTree = "<group>"; };
 		B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
@@ -64,9 +64,9 @@
 		B905C0621AEA6B4900E71FD8 /* APHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
-				B905C0631AEA6B4900E71FD8 /* main.m */,
 				B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */,
 				B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */,
+				B905C0631AEA6B4900E71FD8 /* main.mm */,
 			);
 			path = APHTTPRequest;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */,
-				B905C0641AEA6B4900E71FD8 /* main.m in Sources */,
+				B905C0641AEA6B4900E71FD8 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +245,7 @@
 				B905C0671AEA6B4900E71FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
