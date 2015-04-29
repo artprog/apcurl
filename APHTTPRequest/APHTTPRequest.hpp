@@ -11,19 +11,23 @@
 
 #include <curl/curl.h>
 #include <string>
+#include <functional>
 
 using namespace std;
 
 class APHTTPRequest {
     CURL *_curl;
+    CURLM *_curl_multi;
     string _content;
   private:
     static size_t writeCallback(void *contents, size_t size, size_t nmemb, void *userp);
+//    void executeBackground();
   public:
     APHTTPRequest();
-    APHTTPRequest(const string &url) : APHTTPRequest() { curl_easy_setopt(_curl, CURLOPT_URL, url.c_str()); }
-    ~APHTTPRequest() { curl_easy_cleanup(_curl); }
+    APHTTPRequest(const string &url);
+    ~APHTTPRequest();
     const string& execute();
+    void execute(const function<void (const string &)> &handler);
 };
 
 static ostream& operator<<(ostream& stream, APHTTPRequest &request) {

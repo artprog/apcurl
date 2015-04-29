@@ -14,7 +14,10 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         APHTTPRequest request("http://artprog.pl");
-        cout << request << endl << request;
+//        cout << request << endl << request;
+        request.execute([](const string &response) {
+            cout << response;
+        });
     }
     return 0;
 }
