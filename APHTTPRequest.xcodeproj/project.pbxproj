@@ -10,6 +10,7 @@
 		B905C0641AEA6B4900E71FD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B905C0631AEA6B4900E71FD8 /* main.mm */; };
 		B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */; };
 		B905C06C1AEA6BFE00E71FD8 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */; };
+		B9FFC1401AFA40480017309F /* APOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9FFC13E1AFA40480017309F /* APOperation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 		B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APHTTPRequest.cpp; sourceTree = "<group>"; };
 		B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APHTTPRequest.hpp; sourceTree = "<group>"; };
 		B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
+		B9FFC13E1AFA40480017309F /* APOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APOperation.cpp; sourceTree = "<group>"; };
+		B9FFC13F1AFA40480017309F /* APOperation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APOperation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		B905C0621AEA6B4900E71FD8 /* APHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				B9FFC13F1AFA40480017309F /* APOperation.hpp */,
+				B9FFC13E1AFA40480017309F /* APOperation.cpp */,
 				B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */,
 				B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */,
 				B905C0631AEA6B4900E71FD8 /* main.mm */,
@@ -128,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */,
+				B9FFC1401AFA40480017309F /* APOperation.cpp in Sources */,
 				B905C0641AEA6B4900E71FD8 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

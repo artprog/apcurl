@@ -12,16 +12,20 @@
 #include <curl/curl.h>
 #include <string>
 #include <functional>
+#include "APOperation.hpp"
 
 using namespace std;
 
-class APHTTPRequest {
+class APHTTPRequest : public APOperation {
     CURL *_curl;
     CURLM *_curl_multi;
     string _content;
+    function<void (const string &)> _completionHandler;
   private:
     static size_t writeCallback(void *contents, size_t size, size_t nmemb, void *userp);
-//    void executeBackground();
+  protected:
+    void main();
+    void didFinish();
   public:
     APHTTPRequest();
     APHTTPRequest(const string &url);
