@@ -44,14 +44,19 @@ void APHTTPRequest::execute(const function<void (const string &)> &handler) {
     start();
 }
 
-void APHTTPRequest::main() {
+void APHTTPRequest::mainAsynchronous() {
     curl_multi_add_handle(_curl_multi, _curl);
     _content.clear();
     int count;
     do {
         curl_multi_perform(_curl_multi, &count);
-    } while ( count > 0 );
+    } while ( count > 0 || isCancelled() );
     curl_multi_remove_handle(_curl_multi, _curl);
+}
+
+void APHTTPRequest::mainSynchronous() {
+    _content.clear();
+    curl_easy_perform(_curl);
 }
 
 void APHTTPRequest::didFinish() {
