@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B902C63F1AFCBF2600674785 /* APError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C63D1AFCBF2600674785 /* APError.cpp */; };
+		B902C6421AFCBF9300674785 /* APHTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */; };
 		B905C0641AEA6B4900E71FD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B905C0631AEA6B4900E71FD8 /* main.mm */; };
 		B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */; };
 		B905C06C1AEA6BFE00E71FD8 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B902C63D1AFCBF2600674785 /* APError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APError.cpp; sourceTree = "<group>"; };
+		B902C63E1AFCBF2600674785 /* APError.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APError.hpp; sourceTree = "<group>"; };
+		B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APHTTPResponse.cpp; sourceTree = "<group>"; };
+		B902C6411AFCBF9300674785 /* APHTTPResponse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APHTTPResponse.hpp; sourceTree = "<group>"; };
 		B905C0601AEA6B4900E71FD8 /* APHTTPRequest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = APHTTPRequest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B905C0631AEA6B4900E71FD8 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APHTTPRequest.cpp; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 		B905C0621AEA6B4900E71FD8 /* APHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				B902C63E1AFCBF2600674785 /* APError.hpp */,
+				B902C63D1AFCBF2600674785 /* APError.cpp */,
+				B902C6411AFCBF9300674785 /* APHTTPResponse.hpp */,
+				B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */,
 				B9FFC13F1AFA40480017309F /* APOperation.hpp */,
 				B9FFC13E1AFA40480017309F /* APOperation.cpp */,
 				B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */,
@@ -135,6 +145,8 @@
 				B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */,
 				B9FFC1401AFA40480017309F /* APOperation.cpp in Sources */,
 				B905C0641AEA6B4900E71FD8 /* main.mm in Sources */,
+				B902C63F1AFCBF2600674785 /* APError.cpp in Sources */,
+				B902C6421AFCBF9300674785 /* APHTTPResponse.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

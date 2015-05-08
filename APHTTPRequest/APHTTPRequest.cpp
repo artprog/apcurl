@@ -8,11 +8,14 @@
 
 #include "APHTTPRequest.hpp"
 #include <iostream>
+#include <regex>
 
 APHTTPRequest::APHTTPRequest() {
     _curl = curl_easy_init();
     curl_easy_setopt(_curl, CURLOPT_WRITEFUNCTION, &APHTTPRequest::writeCallback);
     curl_easy_setopt(_curl, CURLOPT_WRITEDATA, &_content);
+    curl_easy_setopt(_curl, CURLOPT_HEADERFUNCTION, &APHTTPRequest::headerCallback);
+    curl_easy_setopt(_curl, CURLOPT_HEADERDATA, &_response);
     _curl_multi = curl_multi_init();
 }
 
@@ -31,6 +34,22 @@ APHTTPRequest::~APHTTPRequest() {
 size_t APHTTPRequest::writeCallback(void *contents, size_t size, size_t nmemb, void *userp) {
     size_t bytes = size * nmemb;
     static_cast<string *>(userp)->append(static_cast<char *>(contents), bytes);
+    return bytes;
+}
+
+size_t APHTTPRequest::headerCallback(char *buffer, size_t size, size_t nitems, void *userdata) {
+    size_t bytes = size * nitems;
+    string str;
+    str.append(buffer, bytes);
+    cout << str << endl;
+    regex rgx("([^:]*)(?:: ?(.*))");
+    smatch matches;
+    if (regex_search(str, matches, rgx)) {
+        if ( matches.size() == 3 ) {
+            APHTTPResponse *httpResponse = static_cast<APHTTPResponse *>(userdata);
+            httpResponse->setValueForHTTPHeaderField(matches[2], matches[1]);
+        }
+    }
     return bytes;
 }
 
