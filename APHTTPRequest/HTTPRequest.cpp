@@ -41,7 +41,6 @@ size_t AP::HTTPRequest::headerCallback(char *buffer, size_t size, size_t nitems,
     size_t bytes = size * nitems;
     string str;
     str.append(buffer, bytes);
-    cout << str << endl;
     regex rgx("([^:]*)(?:: ?(.*))");
     smatch matches;
     if (regex_search(str, matches, rgx)) {
@@ -53,12 +52,12 @@ size_t AP::HTTPRequest::headerCallback(char *buffer, size_t size, size_t nitems,
     return bytes;
 }
 
-const string& AP::HTTPRequest::execute() {
+const AP::HTTPResponse& AP::HTTPRequest::execute() {
     startSynchronous();
-    return _content;
+    return _response;
 }
 
-void AP::HTTPRequest::execute(const function<void (const string &)> &handler) {
+void AP::HTTPRequest::execute(const function<void (const HTTPResponse &)> &handler) {
     _completionHandler = handler;
     start();
 }
@@ -70,17 +69,27 @@ void AP::HTTPRequest::mainAsynchronous() {
     do {
         curl_multi_perform(_curl_multi, &count);
     } while ( count > 0 || isCancelled() );
+    if ( !isCancelled() ) {
+        long code = 0;
+        curl_easy_getinfo(_curl, CURLINFO_RESPONSE_CODE, &code);
+        _response.setCode(code);
+    }
+    _response.setResponseBody(_content);
     curl_multi_remove_handle(_curl_multi, _curl);
 }
 
 void AP::HTTPRequest::mainSynchronous() {
     _content.clear();
     curl_easy_perform(_curl);
+    long code = 0;
+    curl_easy_getinfo(_curl, CURLINFO_RESPONSE_CODE, &code);
+    _response.setCode(code);
+    _response.setResponseBody(_content);
 }
 
 void AP::HTTPRequest::didFinish() {
     Operation::didFinish();
     if ( _completionHandler ) {
-        _completionHandler(_content);
+        _completionHandler(_response);
     }
 }

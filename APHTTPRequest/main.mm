@@ -16,8 +16,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         HTTPRequest request("http://artprog.pl");
         cout << request << endl << request << endl;
-        request.execute([](const string &response) {
-            cout << response << endl;
+        request.execute([](const HTTPResponse &response) {
+            cout << response.responseBody() << endl;
         });
         cout << "I am here" << endl;
     }

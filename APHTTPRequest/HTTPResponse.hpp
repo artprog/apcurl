@@ -17,10 +17,15 @@ using namespace std;
 namespace AP {
 
 class HTTPResponse {
-    map<string, string> _responseHeaders;
+    long _code;
     string _responseBody;
+    map<string, string> _responseHeaders;
   public:
-    string responseBody() const { return _responseBody; }
+    HTTPResponse() : _code(0) { }
+    void setCode(long code) { _code = code; }
+    long code() const { return _code; }
+    void setResponseBody(const string &body) { _responseBody = body; }
+    const string& responseBody() const { return _responseBody; }
     void setValueForHTTPHeaderField(const string &value, const string &field);
     string valueForHTTPHeaderField(const string &field);
 };

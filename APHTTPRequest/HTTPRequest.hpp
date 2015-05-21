@@ -24,7 +24,7 @@ class HTTPRequest : public Operation {
     CURLM *_curl_multi;
     string _content;
     HTTPResponse _response;
-    function<void (const string &)> _completionHandler;
+    function<void (const HTTPResponse &)> _completionHandler;
   private:
     static size_t writeCallback(void *contents, size_t size, size_t nmemb, void *userp);
     static size_t headerCallback(char *buffer, size_t size, size_t nitems, void *userdata);
@@ -36,12 +36,12 @@ class HTTPRequest : public Operation {
     HTTPRequest();
     HTTPRequest(const string &url);
     ~HTTPRequest();
-    const string& execute();
-    void execute(const function<void (const string &)> &handler);
+    const HTTPResponse& execute();
+    void execute(const function<void (const HTTPResponse &)> &handler);
 };
 
 static ostream& operator<<(ostream& stream, HTTPRequest &request) {
-    stream << request.execute();
+    stream << request.execute().responseBody();
     return stream;
 }
     
