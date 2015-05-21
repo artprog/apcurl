@@ -1,20 +1,22 @@
 //
-//  APHTTPResponse.hpp
+//  HTTPResponse.hpp
 //  APHTTPRequest
 //
 //  Created by Adam Zugaj on 08/05/15.
 //  Copyright (c) 2015 ArtProg. All rights reserved.
 //
 
-#ifndef __APHTTPRequest__APHTTPResponse__
-#define __APHTTPRequest__APHTTPResponse__
+#ifndef __HTTPRequest__HTTPResponse__
+#define __HTTPRequest__HTTPResponse__
 
 #include <map>
 #include <string>
 
 using namespace std;
 
-class APHTTPResponse {
+namespace AP {
+
+class HTTPResponse {
     map<string, string> _responseHeaders;
     string _responseBody;
   public:
@@ -22,5 +24,7 @@ class APHTTPResponse {
     void setValueForHTTPHeaderField(const string &value, const string &field);
     string valueForHTTPHeaderField(const string &field);
 };
+    
+}
 
-#endif /* defined(__APHTTPRequest__APHTTPResponse__) */
+#endif /* defined(__HTTPRequest__HTTPResponse__) */

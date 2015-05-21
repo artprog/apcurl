@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import "APHTTPRequest.hpp"
+#import "HTTPRequest.hpp"
 #include <string>
 
 using namespace std;
@@ -33,7 +33,7 @@ using namespace std;
     NSURL *url = [[NSBundle bundleForClass:[self class]] URLForResource:@"artprog" withExtension:@"html"];
     NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:NULL];
     string contentString([content cStringUsingEncoding:NSUTF8StringEncoding]);
-    APHTTPRequest request([[url absoluteString] cStringUsingEncoding:NSUTF8StringEncoding]);
+    AP::HTTPRequest request([[url absoluteString] cStringUsingEncoding:NSUTF8StringEncoding]);
     string response = request.execute();
     XCTAssert(response == contentString, @"wrong request response!");
 }

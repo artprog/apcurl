@@ -1,20 +1,22 @@
 //
-//  APOperation.hpp
+//  Operation.hpp
 //  APHTTPRequest
 //
 //  Created by Adam Zugaj on 06/05/15.
 //  Copyright (c) 2015 ArtProg. All rights reserved.
 //
 
-#ifndef __APHTTPRequest__APOperation__
-#define __APHTTPRequest__APOperation__
+#ifndef __HTTPRequest__Operation__
+#define __HTTPRequest__Operation__
 
 #include <thread>
 #include <mutex>
 
 using namespace std;
 
-class APOperation {
+namespace AP {
+
+class Operation {
     struct State {
       bool isExecuting : 1;
       bool isFinished  : 1;
@@ -39,11 +41,13 @@ class APOperation {
     virtual void willStart();
     virtual void didFinish();
   public:
-    APOperation();
-    virtual ~APOperation();
+    Operation();
+    virtual ~Operation();
     bool isExecuting();
     bool isFinished();
     bool isCancelled();
 };
+    
+}
 
-#endif /* defined(__APHTTPRequest__APOperation__) */
+#endif /* defined(__HTTPRequest__Operation__) */

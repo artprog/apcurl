@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B902C63F1AFCBF2600674785 /* APError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C63D1AFCBF2600674785 /* APError.cpp */; };
-		B902C6421AFCBF9300674785 /* APHTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */; };
+		B902C63F1AFCBF2600674785 /* Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C63D1AFCBF2600674785 /* Error.cpp */; };
+		B902C6421AFCBF9300674785 /* HTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C6401AFCBF9300674785 /* HTTPResponse.cpp */; };
 		B905C0641AEA6B4900E71FD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B905C0631AEA6B4900E71FD8 /* main.mm */; };
-		B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */; };
+		B905C06A1AEA6BD700E71FD8 /* HTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* HTTPRequest.cpp */; };
 		B905C06C1AEA6BFE00E71FD8 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */; };
 		B93B5F211B0610BC0032FE42 /* APHTTPRequestTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B93B5F201B0610BC0032FE42 /* APHTTPRequestTests.mm */; };
 		B93B5F271B0613600032FE42 /* artprog.html in Resources */ = {isa = PBXBuildFile; fileRef = B93B5F261B0613600032FE42 /* artprog.html */; };
-		B93B5F281B0613840032FE42 /* APHTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */; };
-		B93B5F2A1B06154F0032FE42 /* APOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9FFC13E1AFA40480017309F /* APOperation.cpp */; };
-		B93B5F2B1B06155B0032FE42 /* APHTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */; };
+		B93B5F281B0613840032FE42 /* HTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B905C0681AEA6BD700E71FD8 /* HTTPRequest.cpp */; };
+		B93B5F2A1B06154F0032FE42 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9FFC13E1AFA40480017309F /* Operation.cpp */; };
+		B93B5F2B1B06155B0032FE42 /* HTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C6401AFCBF9300674785 /* HTTPResponse.cpp */; };
 		B93B5F2C1B0615DF0032FE42 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */; };
-		B9FFC1401AFA40480017309F /* APOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9FFC13E1AFA40480017309F /* APOperation.cpp */; };
+		B9FFC1401AFA40480017309F /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9FFC13E1AFA40480017309F /* Operation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,21 +34,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B902C63D1AFCBF2600674785 /* APError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APError.cpp; sourceTree = "<group>"; };
-		B902C63E1AFCBF2600674785 /* APError.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APError.hpp; sourceTree = "<group>"; };
-		B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APHTTPResponse.cpp; sourceTree = "<group>"; };
-		B902C6411AFCBF9300674785 /* APHTTPResponse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APHTTPResponse.hpp; sourceTree = "<group>"; };
+		B902C63D1AFCBF2600674785 /* Error.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Error.cpp; sourceTree = "<group>"; };
+		B902C63E1AFCBF2600674785 /* Error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Error.hpp; sourceTree = "<group>"; };
+		B902C6401AFCBF9300674785 /* HTTPResponse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPResponse.cpp; sourceTree = "<group>"; };
+		B902C6411AFCBF9300674785 /* HTTPResponse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HTTPResponse.hpp; sourceTree = "<group>"; };
 		B905C0601AEA6B4900E71FD8 /* APHTTPRequest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = APHTTPRequest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B905C0631AEA6B4900E71FD8 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
-		B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APHTTPRequest.cpp; sourceTree = "<group>"; };
-		B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APHTTPRequest.hpp; sourceTree = "<group>"; };
+		B905C0681AEA6BD700E71FD8 /* HTTPRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPRequest.cpp; sourceTree = "<group>"; };
+		B905C0691AEA6BD700E71FD8 /* HTTPRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HTTPRequest.hpp; sourceTree = "<group>"; };
 		B905C06B1AEA6BFE00E71FD8 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		B93B5F1C1B0610BC0032FE42 /* APHTTPRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APHTTPRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93B5F1F1B0610BC0032FE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B93B5F201B0610BC0032FE42 /* APHTTPRequestTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = APHTTPRequestTests.mm; sourceTree = "<group>"; };
 		B93B5F261B0613600032FE42 /* artprog.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = artprog.html; sourceTree = "<group>"; };
-		B9FFC13E1AFA40480017309F /* APOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APOperation.cpp; sourceTree = "<group>"; };
-		B9FFC13F1AFA40480017309F /* APOperation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = APOperation.hpp; sourceTree = "<group>"; };
+		B9FFC13E1AFA40480017309F /* Operation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Operation.cpp; sourceTree = "<group>"; };
+		B9FFC13F1AFA40480017309F /* Operation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Operation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +93,14 @@
 		B905C0621AEA6B4900E71FD8 /* APHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
-				B902C63E1AFCBF2600674785 /* APError.hpp */,
-				B902C63D1AFCBF2600674785 /* APError.cpp */,
-				B902C6411AFCBF9300674785 /* APHTTPResponse.hpp */,
-				B902C6401AFCBF9300674785 /* APHTTPResponse.cpp */,
-				B9FFC13F1AFA40480017309F /* APOperation.hpp */,
-				B9FFC13E1AFA40480017309F /* APOperation.cpp */,
-				B905C0691AEA6BD700E71FD8 /* APHTTPRequest.hpp */,
-				B905C0681AEA6BD700E71FD8 /* APHTTPRequest.cpp */,
+				B902C63E1AFCBF2600674785 /* Error.hpp */,
+				B902C63D1AFCBF2600674785 /* Error.cpp */,
+				B902C6411AFCBF9300674785 /* HTTPResponse.hpp */,
+				B902C6401AFCBF9300674785 /* HTTPResponse.cpp */,
+				B9FFC13F1AFA40480017309F /* Operation.hpp */,
+				B9FFC13E1AFA40480017309F /* Operation.cpp */,
+				B905C0691AEA6BD700E71FD8 /* HTTPRequest.hpp */,
+				B905C0681AEA6BD700E71FD8 /* HTTPRequest.cpp */,
 				B905C0631AEA6B4900E71FD8 /* main.mm */,
 			);
 			path = APHTTPRequest;
@@ -220,11 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B905C06A1AEA6BD700E71FD8 /* APHTTPRequest.cpp in Sources */,
-				B9FFC1401AFA40480017309F /* APOperation.cpp in Sources */,
+				B905C06A1AEA6BD700E71FD8 /* HTTPRequest.cpp in Sources */,
+				B9FFC1401AFA40480017309F /* Operation.cpp in Sources */,
 				B905C0641AEA6B4900E71FD8 /* main.mm in Sources */,
-				B902C63F1AFCBF2600674785 /* APError.cpp in Sources */,
-				B902C6421AFCBF9300674785 /* APHTTPResponse.cpp in Sources */,
+				B902C63F1AFCBF2600674785 /* Error.cpp in Sources */,
+				B902C6421AFCBF9300674785 /* HTTPResponse.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B93B5F2B1B06155B0032FE42 /* APHTTPResponse.cpp in Sources */,
-				B93B5F2A1B06154F0032FE42 /* APOperation.cpp in Sources */,
-				B93B5F281B0613840032FE42 /* APHTTPRequest.cpp in Sources */,
+				B93B5F2B1B06155B0032FE42 /* HTTPResponse.cpp in Sources */,
+				B93B5F2A1B06154F0032FE42 /* Operation.cpp in Sources */,
+				B93B5F281B0613840032FE42 /* HTTPRequest.cpp in Sources */,
 				B93B5F211B0610BC0032FE42 /* APHTTPRequestTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +454,7 @@
 				B93B5F231B0610BC0032FE42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

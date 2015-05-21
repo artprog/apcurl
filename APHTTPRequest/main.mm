@@ -7,13 +7,14 @@
 //
 
 #include <iostream>
-#include "APHTTPRequest.hpp"
+#include "HTTPRequest.hpp"
 
 using namespace std;
+using namespace AP;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        APHTTPRequest request("http://artprog.pl");
+        HTTPRequest request("http://artprog.pl");
         cout << request << endl << request << endl;
         request.execute([](const string &response) {
             cout << response << endl;
