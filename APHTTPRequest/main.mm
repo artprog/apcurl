@@ -10,7 +10,7 @@
 #include "HTTPRequest.hpp"
 
 using namespace std;
-using namespace AP;
+using namespace AP::HTTPRequest;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

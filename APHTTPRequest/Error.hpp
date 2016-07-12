@@ -10,11 +10,13 @@
 #define __HTTPRequest__Error__
 
 namespace AP {
+    namespace HTTPRequest {
 
 class Error {
     
   public:
 };
+    }
     
 }
 

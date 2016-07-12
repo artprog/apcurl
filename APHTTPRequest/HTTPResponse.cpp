@@ -8,10 +8,10 @@
 
 #include "HTTPResponse.hpp"
 
-void AP::HTTPResponse::setValueForHTTPHeaderField(const string &value, const string &field) {
+void AP::HTTPRequest::HTTPResponse::setValueForHTTPHeaderField(const string &value, const string &field) {
     _responseHeaders[field] = value;
 }
 
-string AP::HTTPResponse::valueForHTTPHeaderField(const string &field) {
+string AP::HTTPRequest::HTTPResponse::valueForHTTPHeaderField(const string &field) {
     return _responseHeaders[field];
 }

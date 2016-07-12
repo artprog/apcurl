@@ -15,6 +15,7 @@
 using namespace std;
 
 namespace AP {
+namespace HTTPRequest {
 
 class HTTPResponse {
     long _code;
@@ -29,7 +30,8 @@ class HTTPResponse {
     void setValueForHTTPHeaderField(const string &value, const string &field);
     string valueForHTTPHeaderField(const string &field);
 };
-    
+
+}
 }
 
 #endif /* defined(__HTTPRequest__HTTPResponse__) */

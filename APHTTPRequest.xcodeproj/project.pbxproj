@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		656156F91D35217300731C54 /* HTTPRequestTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 656156F71D35217300731C54 /* HTTPRequestTypes.cpp */; };
 		B902C63F1AFCBF2600674785 /* Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C63D1AFCBF2600674785 /* Error.cpp */; };
 		B902C6421AFCBF9300674785 /* HTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B902C6401AFCBF9300674785 /* HTTPResponse.cpp */; };
 		B905C0641AEA6B4900E71FD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B905C0631AEA6B4900E71FD8 /* main.mm */; };
@@ -34,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		656156F71D35217300731C54 /* HTTPRequestTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPRequestTypes.cpp; sourceTree = "<group>"; };
+		656156F81D35217300731C54 /* HTTPRequestTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HTTPRequestTypes.hpp; sourceTree = "<group>"; };
 		B902C63D1AFCBF2600674785 /* Error.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Error.cpp; sourceTree = "<group>"; };
 		B902C63E1AFCBF2600674785 /* Error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Error.hpp; sourceTree = "<group>"; };
 		B902C6401AFCBF9300674785 /* HTTPResponse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPResponse.cpp; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				B905C0691AEA6BD700E71FD8 /* HTTPRequest.hpp */,
 				B905C0681AEA6BD700E71FD8 /* HTTPRequest.cpp */,
 				B905C0631AEA6B4900E71FD8 /* main.mm */,
+				656156F81D35217300731C54 /* HTTPRequestTypes.hpp */,
+				656156F71D35217300731C54 /* HTTPRequestTypes.cpp */,
 			);
 			path = APHTTPRequest;
 			sourceTree = "<group>";
@@ -175,7 +180,7 @@
 		B905C0561AEA6B0600E71FD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = ArtProg;
 				TargetAttributes = {
 					B905C05F1AEA6B4900E71FD8 = {
@@ -223,6 +228,7 @@
 				B905C06A1AEA6BD700E71FD8 /* HTTPRequest.cpp in Sources */,
 				B9FFC1401AFA40480017309F /* Operation.cpp in Sources */,
 				B905C0641AEA6B4900E71FD8 /* main.mm in Sources */,
+				656156F91D35217300731C54 /* HTTPRequestTypes.cpp in Sources */,
 				B902C63F1AFCBF2600674785 /* Error.cpp in Sources */,
 				B902C6421AFCBF9300674785 /* HTTPResponse.cpp in Sources */,
 			);
@@ -245,6 +251,8 @@
 		B905C05A1AEA6B0600E71FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -378,6 +386,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ArtProg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -421,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "ArtProg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
